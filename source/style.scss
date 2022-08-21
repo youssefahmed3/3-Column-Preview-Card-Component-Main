@@ -1,0 +1,129 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    @media screen and (min-width:1000px) {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10%;
+    }
+}
+
+
+.orange {
+    background-color: $bright-orange;
+    border-radius: 10px 10px 0 0;
+    margin-top: 50px;
+
+    @media screen and (min-width:1000px) {
+        border-radius: 10px 0 0 10px;
+        margin: 0;
+    }
+}
+
+.cyan {
+    background-color: $dark-cyan;
+
+}
+
+.dark-cyan {
+    background-color: $very-dark-cyan;
+    margin-bottom: 50px;
+    border-radius: 0 0 10px 10px;
+
+    @media screen and (min-width:1000px) {
+        margin: 0;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.btn {
+
+    width: 150px;
+    height: 50px;
+    font-family: $font-body;
+    text-decoration: none;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    background-color: $very-light-gray;
+
+    &:hover,:active {
+        
+        border: 2px solid $very-light-gray;
+        background-color: transparent;
+        color: $very-light-gray;
+    }
+    
+    @media screen and (min-width:1000px) {
+        
+    }
+}
+
+.wrapper {
+    display: grid;
+    /* grid-template-columns: 85%; */
+    grid-template-rows: repeat(3, 450px);
+    justify-items: center;
+    
+
+    
+    .card {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 0 50px;
+        gap: 20px;
+       
+        
+    }
+    
+    img {
+        align-self: flex-start;
+    }
+    
+    h1 {
+        color: $very-light-gray;
+        font-family: $font-heading;
+        font-size: 35px;
+        text-transform: uppercase;
+    }
+
+    p {
+        width: 80%;
+        font-family: $font-body;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $transparent-white;
+    }
+
+    @media screen and (min-width:1000px) {
+        
+        grid-template-columns: repeat(3,290px);
+        
+        justify-content: center;
+        /* align-content: center; */
+        .card {
+            
+            grid-row: 1;
+            /* min-width: 300px; */
+            width: 100%; 
+            /* padding: 0; */   
+        }
+        
+
+        /* align-items: center; */
+        
+    }
+
+}
